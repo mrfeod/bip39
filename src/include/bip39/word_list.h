@@ -1,6 +1,7 @@
 #ifndef BIP39_WORD_LIST_H
 #define BIP39_WORD_LIST_H
 
+#include <iostream>
 #include <vector>
 #include <string>
 
