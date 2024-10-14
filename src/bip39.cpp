@@ -120,7 +120,7 @@ word_list generate_mnemonic(entropy_bits_t entropy /* = entropy_bits::_128 */, l
     assert((total_bits % BITS_PER_WORD) == 0);
     assert((word_count % MNEMONIC_WORD_MULTIPLE) == 0);
 
-    random_bytes_engine rbe;
+    random_bytes_engine rbe(std::random_device{}());
     std::vector<uint8_t> data(entropy_bits / BYTE_BITS);
     std::generate(begin(data), end(data), [&rbe]() { return static_cast<uint8_t>(std::ref(rbe)()); });
     return create_mnemonic(data, lang);
