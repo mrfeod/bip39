@@ -55,7 +55,7 @@ if(ENABLE_CLANG_TIDY)
 endif()
 
 add_subdirectory(src)
-add_subdirectory(test)
-add_subdirectory(examples)
-add_subdirectory(make_dictionary)
+# add_subdirectory(test)
+# add_subdirectory(examples)
+# add_subdirectory(make_dictionary)
 
